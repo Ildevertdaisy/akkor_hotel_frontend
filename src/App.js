@@ -101,7 +101,7 @@ function App() {
         )}
         {status === 'success' && (
           <div className="search-results">
-            <h2>Search Results:</h2>
+            <h2>Search Result:</h2>
             <Hotels hotels={searchResults}/>
           </div>
         )}
