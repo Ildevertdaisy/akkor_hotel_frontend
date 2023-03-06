@@ -1,0 +1,452 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif+Telugu:wght@100&family=Poppins&display=swap');
+
+*::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --inner-corner: 16px;
+    --padding: 8px;
+}
+
+html, body {
+  height: 100%;
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+div#root {
+    height: 100%;
+}
+
+main#section-404 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+main#section-404 > img {
+    display: block;
+    width: 50%;
+    height: 80%;
+}
+
+main#section-404 button {
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgb(240, 202, 9);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+.layout-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+header {
+    flex: 1;
+    /*background-color: red;*/
+}
+
+header .logo-wrapper{
+    width: 150px;
+    height: 150px;
+}
+
+header .logo-wrapper > img {
+   display: block;
+   width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 2px;
+}
+
+header button {
+    align-self: center;
+    background: transparent;
+    padding: 12px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+}
+
+main.content {
+    flex: 8;
+    /*background-color: lightgreen;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+div.search-section {
+    /*background-color: red;*/
+    padding: 12px;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.search-section > input {
+    width: 30%;
+    height: 100%;
+    border: none;
+    padding: 6px;
+    border-bottom: 2px solid lightgray;
+    background-color: transparent;
+    /*border: 2px solid lightgray;*/
+    outline: none;
+}
+
+div.search-section > input:focus {
+    transform: translateY(-4px);
+}
+
+
+
+/* Cards styles section */
+.card {
+    width: 200px;
+    height: 240px;
+    border: 2px solid lightgray;
+    padding: var(--padding);
+    border-radius: calc(var(--inner-corner) + var(--padding));
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /*background-color: white;*/
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    border-radius: var(--inner-corner);
+    transition: transform 500ms;
+}
+
+
+.card:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.card > .row-1 { 
+    align-self: flex-start;
+}
+
+.card > .row-1 > h2 {
+    font-size: 0.9rem;
+    background-color: rgb(206, 198, 84);
+    padding: 4px;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.card > .row-2 > span {
+    font-size: 1.2rem;
+    color: rgb(41, 61, 213);
+} 
+
+.card > .row-3 {
+    margin-top: 8px;
+    display: flex;
+    /*background-color: red;*/
+    width: 100%;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.card > .row-3 > span {
+    padding: 8px;
+    background-color: lightgray;
+    border-radius: 6px;
+}
+
+.address-section {
+    position: absolute;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 24px;
+    left: 12px;
+    padding: 6px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Cards styles section end */
+
+/* hotels-grid styles section */
+.hotels-grid {
+    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+}
+/* hotels-grid styles section end */
+
+footer{
+    flex: 1;
+    /*background-color: purple;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+
+
+/* Register form */
+.login-container {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container > form{
+   width: 400px;
+   height: 500px;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 20px;
+   box-shadow: 10px 10px 27px -6px rgba(0,0,0,0.37);
+}
+
+.login-container > form > .row:first-of-type{
+    margin-top: 100px;
+} 
+
+.login-container > form > .row:last-of-type{
+    margin-top: 150px;
+} 
+
+.login-container > form > .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container > form > .row > input {
+    padding: 8px;
+    width: 310px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid lightgray;
+    font-size: 1.2rem;
+    
+}
+
+.login-container > form > .row > label{
+  align-self: flex-start;
+  margin-left: 40px;
+  font-size: 1.4rem;
+}
+
+.login-container > form > .row > input:focus{
+    border-color: blueviolet;
+    background-color: transparent;
+}
+
+.button-row{
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.button-row > button {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.button-row >  p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-row >  p > a {
+    text-decoration: none;
+}
+
+.button-row >  p > a:hover{
+    text-decoration: underline;
+}
+
+.login-form button > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+}
+
+.login-form > .button-row > button {
+    width: 150px;
+    height: 40px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.error-login {
+    color: red;
+}
+
+
+.login-form button:hover {
+    background-color: deeppink;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.register-container{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.register-container > form{
+    width: 400px;
+    height: 640px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 27px -6px rgba(0,0,0,0.37);
+ }
+ 
+ .register-container > form > .row:first-of-type{
+     margin-top: 78px;
+ } 
+ 
+ 
+ .register-container > form > .row {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+     width: 100%;
+     margin-top: 10px;
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ .register-container > form > .row > input {
+     padding: 8px;
+     width: 310px;
+     border: none;
+     outline: none;
+     border-bottom: 2px solid lightgray;
+     font-size: 1.2rem;
+     
+ }
+ 
+ .register-container > form > .row > label{
+   align-self: flex-start;
+   margin-left: 40px;
+   font-size: 1.4rem;
+ }
+ 
+ .register-container > form > .row > input:focus{
+     border-color: blueviolet;
+     background-color: transparent;
+ }
+ 
+.register-container > .button-row{
+     margin-left: 20px;
+     margin-top: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+ }
+ 
+.register-container > .button-row > button {
+     cursor: pointer;
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ 
+ .register-container > .button-row >  p{
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ .register-container > .button-row >  p > a {
+     text-decoration: none;
+ }
+ 
+ .register-container >  p > a:hover{
+     text-decoration: underline;
+ }
+ 
+  button > img {
+     display: block;
+     width: 50%;
+     height: 100%;
+ }
+ 
+.register-container  button {
+     width: 150px;
+     height: 40px;
+     background-color: blueviolet;
+     border-radius: 10px;
+     border: none;
+     font-size: 1.1rem;
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     font-weight: bold;
+ }
+ 
+.register-container .error-register {
+     color: red;
+ }
+ 
+ 
+/* Register form end */
+
